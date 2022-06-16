@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
+
+@layer base {
+  body {
+    @apply font-[Raleway];
+    @apply bg-[#020202];
+  }
+  li {
+    @apply px-4;
+    @apply cursor-pointer;
+  }
+}
+
+.content-div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+}
+
+.content-div:hover {
+  background-image: linear-gradient(
+    to right,
+    rgba(112, 157, 255, 0.8),
+    hsla(242, 74%, 61%, 0.8)
+  ) !important;
+}
+
+/* navbar hover */
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all 0.5s;
+}
+
+/* stroke */
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  margin-top: -10px;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: #fff;
+  height: 2px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+.card-product {
+  background: #212121;
+  border-radius: 5px;
+}
+
+.card-product:hover {
+  box-shadow: 0px 0px 10px #3d3d3d;
+}
+
+.card {
+  width: 14rem;
+  height: 24rem;
+}
+
+.desc {
+  margin-top: -37rem;
+  margin-left: 29rem;
+}
+
+/* SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f100;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* END SCROLLBAR */
+.search {
+  max-width: 240px;
+  width: 100%;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid rgb(239, 64, 64);
+  border-right: none;
+  padding: 5px;
+  height: 36px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
+}
+
+.searchTerm:focus {
+  color: rgb(239, 64, 64);
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid rgb(239, 64, 64);
+  background: rgb(239, 64, 64);
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+
+.spike {
+  width: 30rem;
+  height: 9rem;
+}
+
+.card-form-input {
+  background: rgba(210, 210, 210, 0.25);
+  border: 2px solid #bcbcbc;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.child-1 {
+  display: flex;
+  flex: 1 1 30rem;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 60px;
+  padding-right: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .res-child-1 {
+    padding-left: 100px;
+    margin-top: 50px;
+  }
+
+  .res-child-2 {
+    padding-left: 200px;
+    margin-top: 50px;
+  }
+}
+
+.child-2 {
+  display: flex;
+  flex: 1 1 30rem;
+  flex-direction: column;
+  justify-content: center;
+}
